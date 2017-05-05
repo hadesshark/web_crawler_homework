@@ -22,6 +22,11 @@ def main():
     have_crawler = [item for item in card_images if 'crawler' in item['src']]
     print('總共有{}張圖片網址含有 \'crawler\' 字串。'.format(len(have_crawler)))
 
+    # 另一個寫法
+    # have_crawler = soup1.find_all('img', {'src': re.compile('crawler')})
+    # len_crawler = len([item['src'] for item in have_crawler])
+    # print('總共有{}張圖片網址含有 \'crawler\' 字串。'.format(len_crawler))
+
 
     url2 = 'http://blog.castman.net/web-crawler-tutorial/ch2/table/table.html'
     soup = sucess_soup(url2)
